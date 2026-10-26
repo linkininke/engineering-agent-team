@@ -11,7 +11,10 @@ def main():
     create.add_argument('project'); create.add_argument('--requirement',required=True)
     create.add_argument('--adapter',choices=['mock','openai'],default='mock')
     create.add_argument('--target',choices=['staging','production'],default='staging')
-    create.add_argument('--allow-test-execution',action='store_true',help='Trust generated Python tests to execute locally; not sandboxed')
+    create.add_argument('--allow-test-execution',action='store_true',help='Trust generated Python tests to execute on the host; not sandboxed')
+    create.add_argument('--repo',help='Import a local Git repository into a linked worktree')
+    create.add_argument('--dirty',choices=['committed','include'],help='Required when the repo has uncommitted changes')
+    create.add_argument('--executor',choices=['host','container'],default='host',help='Test runner; container never falls back to the host')
     for command in ['status','next','artifacts']:
         q=sub.add_parser(command); q.add_argument('run')
     q=sub.add_parser('approve'); q.add_argument('run'); q.add_argument('approval')
@@ -22,7 +25,7 @@ def main():
     try:
         engine=Orchestrator(args.home)
         if args.command=='create':
-            result=engine.create(args.project,args.requirement,args.adapter,args.target,args.allow_test_execution).model_dump(mode='json')
+            result=engine.create(args.project,args.requirement,args.adapter,args.target,args.allow_test_execution,args.repo,args.dirty,args.executor).model_dump(mode='json')
         elif args.command=='status': result=engine.store.status(args.run)
         elif args.command=='next': result=engine.next(args.run).model_dump(mode='json')
         elif args.command=='approve': result=engine.approve(args.run,args.approval,args.actor,not args.reject,args.note).model_dump(mode='json')
@@ -35,7 +38,9 @@ def main():
             with engine.store.connect() as c: result=c.execute('SELECT id,project,created FROM runs ORDER BY created').fetchall()
         else:
             import importlib.util, pydantic, shutil
-            result={'python':sys.version,'pydantic':pydantic.__version__,'sqlite':'ready','openai_sdk':bool(importlib.util.find_spec('agents')),'git':shutil.which('git'),'mock':'ready'}
+            from . import __version__
+            from .container import runtime_path
+            result={'version':__version__,'python':sys.version,'pydantic':pydantic.__version__,'sqlite':'ready','openai_sdk':bool(importlib.util.find_spec('agents')),'git':shutil.which('git'),'container':runtime_path(),'mock':'ready'}
         print(json.dumps(result,ensure_ascii=False,indent=2))
     except Exception as exc:
         print(f'{type(exc).__name__}: {exc}',file=sys.stderr)

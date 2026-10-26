@@ -40,13 +40,24 @@ class Change(Model):
 class Implementation(Model):
     summary: str
     changes: list[Change] = Field(min_length=1)
+    patch: str = ''
+    baseline: str = ''
     high_risk: bool
+
+class AcceptanceSuite(Model):
+    summary: str
+    files: list[Change] = Field(min_length=1)
 
 class TestReport(Model):
     exit_code: int
     output: str
     passed: bool
     command: list[str]
+    dev_passed: bool = False
+    acceptance_passed: bool = False
+    dev_output: str = ''
+    acceptance_output: str = ''
+    acceptance_command: list[str] = Field(default_factory=list)
 
 class Review(Model):
     verdict: Literal['PASS','BLOCK']
@@ -79,3 +90,10 @@ class EngineeringState(Model):
     tested_digest: str | None=None
     reviewed_digest: str | None=None
     allow_test_execution: bool=False
+    repo: str | None=None
+    base_commit: str | None=None
+    branch: str | None=None
+    task_head: str | None=None
+    dirty: Literal['clean','committed','include'] | None=None
+    executor: Literal['host','container']='host'
+    acceptance_digest: str | None=None

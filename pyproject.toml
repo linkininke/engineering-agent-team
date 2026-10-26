@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "engineering-agent-team"
-version = "0.1.0"
-description = "Approval-driven engineering agent team MVP"
+version = "0.2.0"
+description = "Approval-driven engineering agent team"
 requires-python = ">=3.11"
 dependencies = ["pydantic>=2.10,<3"]
 
