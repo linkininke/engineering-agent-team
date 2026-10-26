@@ -1,0 +1,14 @@
+{
+  "summary": "Implement calculator fixture",
+  "changes": [
+    {
+      "path": "calculator.py",
+      "content": "def add(a, b):\n    return a + b\n"
+    },
+    {
+      "path": "tests/test_calculator.py",
+      "content": "import unittest\nfrom calculator import add\n\nclass CalculatorTests(unittest.TestCase):\n    def test_positive(self):\n        self.assertEqual(add(2, 3), 5)\n    def test_negative(self):\n        self.assertEqual(add(-2, 2), 0)\n"
+    }
+  ],
+  "high_risk": false
+}

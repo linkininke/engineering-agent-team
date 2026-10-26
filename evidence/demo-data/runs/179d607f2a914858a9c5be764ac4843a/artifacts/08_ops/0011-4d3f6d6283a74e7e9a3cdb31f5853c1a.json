@@ -1,0 +1,6 @@
+{
+  "summary": "Local release package created; no external service deployed.",
+  "recommendations": [
+    "Add project-specific acceptance tests before real deployment"
+  ]
+}

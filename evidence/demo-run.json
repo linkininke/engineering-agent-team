@@ -1,0 +1,126 @@
+{
+  "run_id": "179d607f2a914858a9c5be764ac4843a",
+  "final": "DONE",
+  "history": [
+    {
+      "revision": 0,
+      "stage": "REQUIREMENT",
+      "pending": null
+    },
+    {
+      "revision": 1,
+      "stage": "APPROVAL",
+      "pending": "1a407bada51b4144884e330df2d15726"
+    },
+    {
+      "revision": 2,
+      "stage": "CONTEXT",
+      "pending": null
+    },
+    {
+      "revision": 3,
+      "stage": "ARCHITECTURE",
+      "pending": null
+    },
+    {
+      "revision": 4,
+      "stage": "APPROVAL",
+      "pending": "071e139e38994eb288c1d438913661e3"
+    },
+    {
+      "revision": 5,
+      "stage": "IMPLEMENTATION",
+      "pending": null
+    },
+    {
+      "revision": 6,
+      "stage": "APPROVAL",
+      "pending": "943d89b9de16451c84a312a505583ac4"
+    },
+    {
+      "revision": 7,
+      "stage": "IMPLEMENTATION",
+      "pending": null
+    },
+    {
+      "revision": 8,
+      "stage": "TEST",
+      "pending": null
+    },
+    {
+      "revision": 9,
+      "stage": "REVIEW",
+      "pending": null
+    },
+    {
+      "revision": 10,
+      "stage": "DELIVERY",
+      "pending": null
+    },
+    {
+      "revision": 11,
+      "stage": "OPS",
+      "pending": null
+    },
+    {
+      "revision": 12,
+      "stage": "DONE",
+      "pending": null
+    }
+  ],
+  "status": {
+    "state": {
+      "run_id": "179d607f2a914858a9c5be764ac4843a",
+      "project": "calculator-demo",
+      "request": "Create add(a, b) supporting positive and negative numbers.",
+      "adapter": "mock",
+      "stage": "DONE",
+      "target": "staging",
+      "revision": 12,
+      "attempts": 1,
+      "max_attempts": 3,
+      "artifacts": {
+        "REQUIREMENT": "4886a2b903214cfd8e1a29b90f39f18c",
+        "CONTEXT": "5f20d1b1d7d74614b462916d5c80221e",
+        "ARCHITECTURE": "be413450773e48689b5caf57ee7f98b8",
+        "IMPLEMENTATION": "2e78ff43f5c2464c91244ebad5e43631",
+        "TEST": "3f7d9e44530f4c6b9137927f7030043e",
+        "REVIEW": "1fa5ebbe974946048658f9aa619f2f33",
+        "DELIVERY": "022b9e38bfe94ec588de070a168f5e3e",
+        "OPS": "4d3f6d6283a74e7e9a3cdb31f5853c1a"
+      },
+      "pending": null,
+      "resume": null,
+      "candidate": null,
+      "tested_digest": "d1e6e3befb5b084afa2aa09a0eea74f9d39bdee78e3198276eb9a0030fb84f37",
+      "reviewed_digest": "d1e6e3befb5b084afa2aa09a0eea74f9d39bdee78e3198276eb9a0030fb84f37",
+      "allow_test_execution": true
+    },
+    "approvals": [
+      {
+        "id": "1a407bada51b4144884e330df2d15726",
+        "gate": "requirement",
+        "subject": "4886a2b903214cfd8e1a29b90f39f18c",
+        "status": "approved",
+        "actor": "DEMO_SIMULATED_HUMAN",
+        "note": "Fixture-only simulated approval"
+      },
+      {
+        "id": "071e139e38994eb288c1d438913661e3",
+        "gate": "architecture",
+        "subject": "be413450773e48689b5caf57ee7f98b8",
+        "status": "approved",
+        "actor": "DEMO_SIMULATED_HUMAN",
+        "note": "Fixture-only simulated approval"
+      },
+      {
+        "id": "943d89b9de16451c84a312a505583ac4",
+        "gate": "high_risk_change",
+        "subject": "9b7cafac2a7d7c0f6c9d00d547ad166632b472d32ccdebd287c0c29c45eb9cdc",
+        "status": "approved",
+        "actor": "DEMO_SIMULATED_HUMAN",
+        "note": "Fixture-only simulated approval"
+      }
+    ]
+  }
+}

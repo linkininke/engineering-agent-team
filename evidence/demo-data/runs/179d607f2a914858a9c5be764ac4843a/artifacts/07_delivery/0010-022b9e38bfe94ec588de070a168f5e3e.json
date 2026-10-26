@@ -1,0 +1,6 @@
+{
+  "target": "staging",
+  "mode": "local-package",
+  "package": "staging-d1e6e3befb5b084afa2aa09a0eea74f9d39bdee78e3198276eb9a0030fb84f37.zip",
+  "digest": "08fb315a4592b1eff79ee3a3efecae3dbd7b3b1a9e1c45c13a54f0e3cdbe6ca5"
+}

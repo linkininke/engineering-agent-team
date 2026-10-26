@@ -1,0 +1,12 @@
+{
+  "goal": "Create add(a, b) supporting positive and negative numbers.",
+  "acceptance_criteria": [
+    "add(2, 3) returns 5",
+    "add(-2, 2) returns 0"
+  ],
+  "non_scope": [
+    "UI",
+    "External deployment"
+  ],
+  "open_questions": []
+}

@@ -1,0 +1,9 @@
+{
+  "files": {},
+  "constraints": [
+    "Python + stdlib unittest",
+    "Local packaging only",
+    "No arbitrary shell",
+    "No file deletion"
+  ]
+}

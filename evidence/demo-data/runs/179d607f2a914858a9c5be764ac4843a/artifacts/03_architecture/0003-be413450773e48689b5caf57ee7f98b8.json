@@ -1,0 +1,8 @@
+{
+  "design": "Pure Python calculator with unittest acceptance tests.",
+  "tasks": [
+    "Implement calculator.add",
+    "Cover positive and negative addition"
+  ],
+  "risks": []
+}

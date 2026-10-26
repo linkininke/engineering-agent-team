@@ -1,0 +1,8 @@
+{
+  "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]",
+  "pydantic": "2.12.5",
+  "sqlite": "ready",
+  "openai_sdk": false,
+  "git": "C:\\Users\\14645\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd\\git.EXE",
+  "mock": "ready"
+}

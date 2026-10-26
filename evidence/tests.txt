@@ -1,0 +1,15 @@
+test_change_invalidates_test_and_review (test_workflow.FlowTests.test_change_invalidates_test_and_review) ... ok
+test_complete_and_persisted (test_workflow.FlowTests.test_complete_and_persisted) ... ok
+test_gate_cannot_skip_and_reject (test_workflow.FlowTests.test_gate_cannot_skip_and_reject) ... ok
+test_no_tests_is_failure (test_workflow.FlowTests.test_no_tests_is_failure) ... ok
+test_permissions_and_path_escape (test_workflow.FlowTests.test_permissions_and_path_escape) ... ok
+test_production_gate (test_workflow.FlowTests.test_production_gate) ... ok
+test_requires_execution_opt_in (test_workflow.FlowTests.test_requires_execution_opt_in) ... ok
+test_review_block_and_attempt_limit (test_workflow.FlowTests.test_review_block_and_attempt_limit) ... ok
+test_source_change_invalidates_change_approval (test_workflow.FlowTests.test_source_change_invalidates_change_approval) ... ok
+test_test_fail_returns_to_builder (test_workflow.FlowTests.test_test_fail_returns_to_builder) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 9.079s
+
+OK

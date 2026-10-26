@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "output": "test_negative (test_calculator.CalculatorTests.test_negative) ... ok\ntest_positive (test_calculator.CalculatorTests.test_positive) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n",
+  "passed": true,
+  "command": [
+    "E:\\python3.11\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ]
+}
